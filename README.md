@@ -1,0 +1,2 @@
+# hapijs template
+
