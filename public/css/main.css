@@ -1,0 +1,338 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* ------------------------------ General ------------------------------ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'MaximumSecurity';
+  src: url('../fonts/MAXIMUMSECURITY.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-image: url(/images/omg.png);
+  background-color: #F1F1F1;
+  color: #6C6D6F;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+*::selection {
+  background: #666;
+  color: #eee;
+}
+
+*::-moz-selection {
+  background: #666;
+  color: #eee;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2A2D33;
+  font-family: 'MaximumSecurity';
+  font-weight: 300;
+}
+
+section h3 {
+  color: #aaa;
+  text-shadow: #111 1px 1px 0;
+  margin: 25px 0 15px;
+  font-size: 2.3rem;
+  text-transform: uppercase;
+}
+
+
+a {
+  color: #6AB2EE;
+  text-decoration: none;
+  -webkit-transition: color .24s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: color .24s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -ms-transition: color .24s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: color .24s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: color .24s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+a:link {
+  color: #6AB2EE;
+  text-decoration: none;
+}
+a:visited {
+  color: #6AB2EE;
+  text-decoration: none;
+}
+a:hover {
+  color: #A5D1F5;
+  text-decoration: none;
+}
+a:active {
+  color: #6AB2EE;
+  text-decoration: none;
+}
+
+/* ------------------------------ Error ------------------------------ */
+
+body.error {
+  text-align: center;
+}
+
+body.error section h1 {
+  color: #ff3dab;
+  font-size: 3rem;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+body.error h2 {
+  color: #eee;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.errors {
+  margin: 20px 10px;
+}
+
+.errors li {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
+  color: #111;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+/* ------------------------------ Header ------------------------------ */
+
+body > header {
+  position: relative;
+  width: 100%;
+  background: #2F323A;
+  z-index: 2;
+}
+
+body > header h1 {
+  float: left;
+  margin-right: 15px;
+  color: #959CAC;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+body > header h1 a,
+body > header h1 a:link,
+body > header h1 a:visited,
+body > header h1 a:hover,
+body > header h1 a:active {
+  color: #959CAC;
+  font-size: 1.8rem;
+}
+
+body > header h1 a span {
+  margin-left: -1px;
+  opacity: .25;
+  -webkit-transition: opacity .24s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: opacity .24s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -ms-transition: opacity .24s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: opacity .24s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity .24s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+body > header h1 a:hover span {
+  opacity: 1;
+}
+
+body > header > div {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+  height: 60px;
+  line-height: 60px;
+}
+
+body > header nav {
+  text-align: right;
+}
+
+/* ------------------------------ Buttons ------------------------------ */
+
+.button {
+  display: block;
+  margin: 0;
+  padding: 0 20px;
+  border: 1px solid #6CB5F4;
+  border-radius: 2.3px;
+  font-family: 'MaximumSecurity';
+  line-height: 2.3rem;
+  background: #6CB5F4;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 1.9rem;
+  font-weight: 500;
+  padding: 5px 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color .24s cubic-bezier(0.645, 0.045, 0.355, 1), background-color .24s cubic-bezier(0.645, 0.045, 0.355, 1), border-color .24s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: color .24s cubic-bezier(0.645, 0.045, 0.355, 1), background-color .24s cubic-bezier(0.645, 0.045, 0.355, 1), border-color .24s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -ms-transition: color .24s cubic-bezier(0.645, 0.045, 0.355, 1), background-color .24s cubic-bezier(0.645, 0.045, 0.355, 1), border-color .24s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: color .24s cubic-bezier(0.645, 0.045, 0.355, 1), background-color .24s cubic-bezier(0.645, 0.045, 0.355, 1), border-color .24s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: color .24s cubic-bezier(0.645, 0.045, 0.355, 1), background-color .24s cubic-bezier(0.645, 0.045, 0.355, 1), border-color .24s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.button,
+.button:link,
+.button:visited,
+.button:hover,
+.button:active {
+  color: #FFF;
+}
+
+.button:hover {
+  border-color: #0079FF;
+  background: #0079FF;
+}
+
+.button.subtle {
+  background: transparent;
+  border-color: #D8D8D8;
+  color: #6C6D6F;
+}
+
+.button.subtle:hover {
+  background: transparent;
+  border-color: #D8D8D8;
+  color: #2A2D33;
+}
+
+.button[disabled] {
+  background: #D8D8D8;
+  border-color: #D8D8D8;
+  color: #F7F7F7;
+}
+
+.button-row {
+  overflow: hidden;
+  text-align: right;
+}
+
+.button-row .button {
+  display: inline-block;
+}
+
+.button-row .button + .button {
+  margin-left: 15px;
+}
+
+
+/* ------------------------------ Structure ------------------------------ */
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+  padding-bottom: 100px;
+}
+
+section {
+  margin: 0;
+  max-width: 900px;
+  padding: 10px 0 0;
+}
+
+/* ------------------------------ Form ------------------------------------- */
+
+input[type="text"] {
+  padding: 10px;
+  max-width: 500px;
+  min-width: 300px;
+  width: 70%;
+}
+
+/* ------------------------------ Mobile View ------------------------------ */
+
+@media only screen and (max-width: 680px) {
+  header h1 {
+    padding-left: 10px;
+  }
+
+  .button-row {
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .services-added {
+    min-height: 50px;
+  }
+
+  .services-added-container .placeholder {
+    font-size: 0.8rem;
+    font-weight: 100;
+  }
+
+  .services-added li {
+    margin: 0 2px 2px 0;
+  }
+
+  .tumblr {
+    margin-top: 20px;
+  }
+
+  .service-list-item h4 {
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+}

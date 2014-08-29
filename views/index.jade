@@ -1,0 +1,21 @@
+extend layout
+
+block content
+  section
+    header
+      h3 Enter your service URL
+
+    form(method='post', action='/')
+      input(type='text', name='url', value='')
+
+      .button-row
+        button#create.button(type='submit') Validate
+
+  section
+    if hasErrors
+      h3 You have errors!
+      ol.errors
+        for error in errors
+          li= error
+    else
+      h3 You have no errors!
